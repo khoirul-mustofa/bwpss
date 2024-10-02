@@ -1,14 +1,94 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="2tOWbq8ezWcrBs4vHa_K">
-    <mxGraphModel dx="2284" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nactor Muzakki\nactor \&quot;Penerima Wakaf\&quot; as Penerima\nactor Admin\n\nusecase \&quot;Melihat Dashboard Wakaf\&quot; as UC1\nusecase \&quot;Mengajukan Wakaf\&quot; as UC2\nusecase \&quot;Melihat Status Wakaf\&quot; as UC3\nusecase \&quot;Mengelola Pengguna\&quot; as UC4\nusecase \&quot;Verifikasi Wakaf\&quot; as UC5\nusecase \&quot;Kelola Laporan Wakaf\&quot; as UC6\nusecase \&quot;Melihat Wakaf Masuk\&quot; as UC7\nusecase \&quot;Konfirmasi Penerimaan Wakaf\&quot; as UC8\n\nMuzakki -- UC1\nMuzakki -- UC2\nMuzakki -- UC3\nAdmin -- UC4\nAdmin -- UC5\nAdmin -- UC6\nPenerima -- UC7\nPenerima -- UC8\n@enduml\n&quot;,&#xa;  &quot;format&quot;: &quot;svg&quot;&#xa;}" id="xKr1J6okfYAryBs_471h-1">
-          <mxCell style="shape=image;noLabel=1;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXMtYXNjaWkiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSIxOTVweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjE2NThweDtoZWlnaHQ6MTk1cHg7YmFja2dyb3VuZDojRkZGRkZGOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTY1OCAxOTUiIHdpZHRoPSIxNjU4cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48IS0tZW50aXR5IE11emFra2ktLT48ZyBpZD0iZWxlbV9NdXpha2tpIj48ZWxsaXBzZSBjeD0iMzExLjUiIGN5PSIxNCIgZmlsbD0iI0YxRjFGMSIgcng9IjgiIHJ5PSI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48cGF0aCBkPSJNMzExLjUsMjIgTDMxMS41LDQ5IE0yOTguNSwzMCBMMzI0LjUsMzAgTTMxMS41LDQ5IEwyOTguNSw2NCBNMzExLjUsNDkgTDMyNC41LDY0ICIgZmlsbD0ibm9uZSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNDkiIHg9IjI4NyIgeT0iNzguNzM0NCI+TXV6YWtraTwvdGV4dD48L2c+PCEtLWVudGl0eSBQZW5lcmltYS0tPjxnIGlkPSJlbGVtX1BlbmVyaW1hIj48ZWxsaXBzZSBjeD0iODMxLjUiIGN5PSIxNCIgZmlsbD0iI0YxRjFGMSIgcng9IjgiIHJ5PSI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48cGF0aCBkPSJNODMxLjUsMjIgTDgzMS41LDQ5IE04MTguNSwzMCBMODQ0LjUsMzAgTTgzMS41LDQ5IEw4MTguNSw2NCBNODMxLjUsNDkgTDg0NC41LDY0ICIgZmlsbD0ibm9uZSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iOTkiIHg9Ijc4MiIgeT0iNzguNzM0NCI+UGVuZXJpbWEgV2FrYWY8L3RleHQ+PC9nPjwhLS1lbnRpdHkgQWRtaW4tLT48ZyBpZD0iZWxlbV9BZG1pbiI+PGVsbGlwc2UgY3g9IjEzNjYuNSIgY3k9IjE0IiBmaWxsPSIjRjFGMUYxIiByeD0iOCIgcnk9IjgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjxwYXRoIGQ9Ik0xMzY2LjUsMjIgTDEzNjYuNSw0OSBNMTM1My41LDMwIEwxMzc5LjUsMzAgTTEzNjYuNSw0OSBMMTM1My41LDY0IE0xMzY2LjUsNDkgTDEzNzkuNSw2NCAiIGZpbGw9Im5vbmUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjM2IiB4PSIxMzQ4LjUiIHk9Ijc4LjczNDQiPkFkbWluPC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQzEiPjxlbGxpcHNlIGN4PSIxMDMuMjYzMyIgY3k9IjE2NC44NTI3IiBmaWxsPSIjRjFGMUYxIiByeD0iOTcuMjYzMyIgcnk9IjIxLjg1MjciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE2MSIgeD0iMjIuNzYzMyIgeT0iMTY4LjU5NDgiPk1lbGloYXQgRGFzaGJvYXJkIFdha2FmPC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQzIiPjxlbGxpcHNlIGN4PSIzMTEuNDM4NCIgY3k9IjE2NC45ODc3IiBmaWxsPSIjRjFGMUYxIiByeD0iNzUuNDM4NCIgcnk9IjE3LjQ4NzciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjExMiIgeD0iMjU1LjQzODQiIHk9IjE2OC43Mjk5Ij5NZW5nYWp1a2FuIFdha2FmPC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQzMiPjxlbGxpcHNlIGN4PSI1MDkuNzMwOSIgY3k9IjE2NC45NDYyIiBmaWxsPSIjRjFGMUYxIiByeD0iODcuNzMwOSIgcnk9IjE5Ljk0NjIiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE0MCIgeD0iNDM5LjczMDkiIHk9IjE2OC42ODg0Ij5NZWxpaGF0IFN0YXR1cyBXYWthZjwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUM0Ij48ZWxsaXBzZSBjeD0iMTE3NC41MTMyIiBjeT0iMTY1LjIwMjYiIGZpbGw9IiNGMUYxRjEiIHJ4PSI4MS41MTMyIiByeT0iMTguNzAyNiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTI2IiB4PSIxMTExLjUxMzIiIHk9IjE2OC45NDQ4Ij5NZW5nZWxvbGEgUGVuZ2d1bmE8L3RleHQ+PC9nPjxnIGlkPSJlbGVtX1VDNSI+PGVsbGlwc2UgY3g9IjEzNjYuNDM4NCIgY3k9IjE2NC45ODc3IiBmaWxsPSIjRjFGMUYxIiByeD0iNzUuNDM4NCIgcnk9IjE3LjQ4NzciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjExMiIgeD0iMTMxMC40Mzg0IiB5PSIxNjguNzI5OSI+VmVyaWZpa2FzaSBXYWthZjwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUM2Ij48ZWxsaXBzZSBjeD0iMTU2NC43MzA5IiBjeT0iMTY0Ljk0NjIiIGZpbGw9IiNGMUYxRjEiIHJ4PSI4Ny43MzA5IiByeT0iMTkuOTQ2MiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTQwIiB4PSIxNDk0LjczMDkiIHk9IjE2OC42ODg0Ij5LZWxvbGEgTGFwb3JhbiBXYWthZjwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUM3Ij48ZWxsaXBzZSBjeD0iNzE2LjYwNjIiIGN5PSIxNjQuODIxMiIgZmlsbD0iI0YxRjFGMSIgcng9Ijg0LjYwNjIiIHJ5PSIxOS4zMjEyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIxMzMiIHg9IjY1MC4xMDYyIiB5PSIxNjguNTYzNCI+TWVsaWhhdCBXYWthZiBNYXN1azwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUM4Ij48ZWxsaXBzZSBjeD0iOTQ2LjY5MjMiIGN5PSIxNjUuMTM4NSIgZmlsbD0iI0YxRjFGMSIgcng9IjExMS4xOTIzIiByeT0iMjQuNjM4NSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTkxIiB4PSI4NTEuMTkyMyIgeT0iMTY4Ljg4MDYiPktvbmZpcm1hc2kgUGVuZXJpbWFhbiBXYWthZjwvdGV4dD48L2c+PCEtLWxpbmsgTXV6YWtraSB0byBVQzEtLT48ZyBpZD0ibGlua19NdXpha2tpX1VDMSI+PHBhdGggZD0iTTI4Ni44Miw1OC4yNCBDMjQ5LjgsNzkuNTkgMTc5Ljc3LDEyMCAxMzcuOCwxNDQuMjEgIiBmaWxsPSJub25lIiBpZD0iTXV6YWtraS1VQzEiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjwvZz48IS0tbGluayBNdXpha2tpIHRvIFVDMi0tPjxnIGlkPSJsaW5rX011emFra2lfVUMyIj48cGF0aCBkPSJNMzExLjUsODAuNjYgQzMxMS41LDEwMi44NSAzMTEuNSwxMzAuMDkgMzExLjUsMTQ3LjI2ICIgZmlsbD0ibm9uZSIgaWQ9Ik11emFra2ktVUMyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48L2c+PCEtLWxpbmsgTXV6YWtraSB0byBVQzMtLT48ZyBpZD0ibGlua19NdXpha2tpX1VDMyI+PHBhdGggZD0iTTMzNi4xOCw1OC45NiBDMzcyLjY3LDgxLjA3IDQ0MC45MSwxMjIuNDMgNDc5Ljk5LDE0Ni4xMiAiIGZpbGw9Im5vbmUiIGlkPSJNdXpha2tpLVVDMyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PC9nPjwhLS1saW5rIEFkbWluIHRvIFVDNC0tPjxnIGlkPSJsaW5rX0FkbWluX1VDNCI+PHBhdGggZD0iTTEzNDguNDQsNTUuMjkgQzEzMTQuNDYsNzYuNTMgMTI0MC44OCwxMjIuNTEgMTIwMS4xOCwxNDcuMzIgIiBmaWxsPSJub25lIiBpZD0iQWRtaW4tVUM0IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48L2c+PCEtLWxpbmsgQWRtaW4gdG8gVUM1LS0+PGcgaWQ9ImxpbmtfQWRtaW5fVUM1Ij48cGF0aCBkPSJNMTM2Ni41LDgwLjY2IEMxMzY2LjUsMTAyLjg1IDEzNjYuNSwxMzAuMDkgMTM2Ni41LDE0Ny4yNiAiIGZpbGw9Im5vbmUiIGlkPSJBZG1pbi1VQzUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjwvZz48IS0tbGluayBBZG1pbiB0byBVQzYtLT48ZyBpZD0ibGlua19BZG1pbl9VQzYiPjxwYXRoIGQ9Ik0xMzg0Ljc3LDU1LjA3IEMxNDE5LjA1LDc1Ljg1IDE0OTMuMjYsMTIwLjgyIDE1MzQuOCwxNDYgIiBmaWxsPSJub25lIiBpZD0iQWRtaW4tVUM2IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48L2c+PCEtLWxpbmsgUGVuZXJpbWEgdG8gVUM3LS0+PGcgaWQ9ImxpbmtfUGVuZXJpbWFfVUM3Ij48cGF0aCBkPSJNNzk2LjM3LDgwLjY2IEM3NzUuNzYsMTAyLjE2IDc1MC42MSwxMjguNDEgNzM0LjExLDE0NS42MyAiIGZpbGw9Im5vbmUiIGlkPSJQZW5lcmltYS1VQzciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjwvZz48IS0tbGluayBQZW5lcmltYSB0byBVQzgtLT48ZyBpZD0ibGlua19QZW5lcmltYV9VQzgiPjxwYXRoIGQ9Ik04NjYuNjMsODAuNjYgQzg4NS4zOSwxMDAuMjMgOTA3LjkxLDEyMy43MyA5MjQuMjUsMTQwLjc4ICIgZmlsbD0ibm9uZSIgaWQ9IlBlbmVyaW1hLVVDOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PC9nPjwhLS1TUkM9W1BQNm4zZThtMDRKdFZhTjNwWTBla1hoVGJDSjRnRkU5MU1nWERJclRfN2dyZUJHdWxsOXdsSG1lRWdMZlJmeUdXWEN1WVd2Q0NpclJxMGk0b2VaMnFFX0hlQW5sQlBVNE1DQ0E2NFFaZDNNeUhhVXRDRkxMR1QteWd3VkRwMVRiWFJpTGE4NkhfNFNURXRKTTE1T1F2aDE2RFZXcWdvZWhDSlpwcUpjXzZ2VFNtRjBXUEo0UWtwdlladVZJYXFSUFZvRnRjVU9tTFdwSXFlaklpa0l3X0pwc3RNZ0lrMjlhczlkNmlMaWJtMko0YkJZRFV2WnhpRjBYOHgtVnZOV3Z1VEtCXS0tPjwvZz48L3N2Zz4=;" vertex="1" parent="1">
-            <mxGeometry x="-400" y="280" width="1658" height="195" as="geometry" />
-          </mxCell>
-        </UserObject>
+        <mxCell id="xKr1J6okfYAryBs_471h-2" value="Muzakki" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="187" y="500" width="117" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-3" value="UC1" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-4" value="UC2" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="201" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-5" value="UC3" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="367" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-6" value="Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="683" y="500" width="105" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-7" value="UC4" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="538" y="640" width="89" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-8" value="UC5" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="692" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-9" value="UC6" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-10" value="Penerima" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1098" y="500" width="127" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-11" value="UC7" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1026" y="640" width="89" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-12" value="UC8" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1208" y="640" width="88" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-13" value="Melihat Dashboard Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.96;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-2" target="xKr1J6okfYAryBs_471h-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="64" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-14" value="Mengajukan Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-2" target="xKr1J6okfYAryBs_471h-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-15" value="Melihat Status Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-2" target="xKr1J6okfYAryBs_471h-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="411" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-16" value="Mengelola Pengguna" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.99;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-6" target="xKr1J6okfYAryBs_471h-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="582" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-17" value="Verifikasi Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-6" target="xKr1J6okfYAryBs_471h-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-18" value="Kelola Laporan Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.97;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-6" target="xKr1J6okfYAryBs_471h-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="894" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-19" value="Melihat Wakaf Masuk" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-10" target="xKr1J6okfYAryBs_471h-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1071" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xKr1J6okfYAryBs_471h-20" value="Konfirmasi Penerimaan Wakaf" style="curved=1;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="xKr1J6okfYAryBs_471h-10" target="xKr1J6okfYAryBs_471h-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1252" y="594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
