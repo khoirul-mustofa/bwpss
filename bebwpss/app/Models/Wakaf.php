@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Wakaf extends Model
 {
@@ -20,4 +21,10 @@ class Wakaf extends Model
         'metode_bayar',
         'fcm_token',
     ];
+
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(CategoryWakaf::class, 'category_wakaf');
+    }
 }

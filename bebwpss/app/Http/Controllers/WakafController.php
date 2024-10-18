@@ -14,7 +14,7 @@ class WakafController extends Controller
     public function index()
     {
         try {
-            $wakaf = wakaf::all();
+            $wakaf = Wakaf::all();
             return ResponseHelper::success($wakaf);
         } catch (\Throwable $th) {
             //throw $th;
@@ -27,23 +27,21 @@ class WakafController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama_lengkap' => 'required',
-            'sapaan' => 'in:bapak,ibu,kak',
-            'category_wakaf' => 'required',
-            'price' => 'required',
-            'no_wa' => 'required',
-            'email' => 'email',
-            'pesan' => 'max:500',
-            'metode_bayar' => 'required',
-            'fcm_token' => 'required',
-        ]);
-
         try {
-            $wakaf = wakaf::create($request->all());
+            $request->validate([
+                'nama_lengkap' => 'required',
+                'sapaan' => 'in:bapak,ibu,kak',
+                'category_wakaf' => 'required',
+                'price' => 'required',
+                'no_wa' => 'required',
+                'email' => 'email',
+                'pesan' => 'max:500',
+                'metode_bayar' => 'required',
+                'fcm_token' => 'required',
+            ]);
+            $wakaf = Wakaf::create($request->all());
             return ResponseHelper::success($wakaf);
         } catch (\Throwable $th) {
-            //throw $th;
             return ResponseHelper::error($th->getMessage());
         }
     }
@@ -51,39 +49,50 @@ class WakafController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(wakaf $wakaf)
+    public function show(Wakaf $wakaf)
     {
-        return ResponseHelper::success($wakaf);
+        $response = [
+            "id" => $wakaf->id,
+            "nama_lengkap" => $wakaf->nama_lengkap,
+            "sapaan" => $wakaf->sapaan,
+            "category_wakaf" => $wakaf->category->name,
+            "price" => $wakaf->price,
+            "no_wa" => $wakaf->no_wa,
+            "email" => $wakaf->email,
+            "pesan" => $wakaf->pesan,
+            "metode_bayar" => $wakaf->metode_bayar,
+            "fcm_token" => $wakaf->fcm_token,
+
+        ];
+
+        return ResponseHelper::success($response);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, wakaf $wakaf)
+    public function update(Request $request, Wakaf $wakaf)
     {
         try {
             $request->validate([
-            'nama_lengkap' => 'required',
-            'sapaan' => 'in:bapak,ibu,kak',
-            'category_wakaf' => 'required',
-            'price' => 'required',
-            'no_wa' => 'required',
-            'email' => 'email',
-            'pesan' => 'max:500',
-            'metode_bayar' => 'required',
-            'fcm_token' => 'required',
-        ]);
+                'nama_lengkap' => 'required',
+                'sapaan' => 'in:bapak,ibu,kak',
+                'category_wakaf' => 'required',
+                'price' => 'required',
+                'no_wa' => 'required',
+                'email' => 'email',
+                'pesan' => 'max:500',
+                'metode_bayar' => 'required',
+                'fcm_token' => 'required',
+            ]);
             $wakaf = wakaf::find($wakaf->id);
 
-        $wakaf->update($request->all());
-        return ResponseHelper::success($wakaf);
-
+            $wakaf->update($request->all());
+            return ResponseHelper::success($wakaf);
         } catch (\Throwable $th) {
             //throw $th;
             return ResponseHelper::error($th->getMessage());
         }
-
-
     }
 
 
@@ -93,18 +102,29 @@ class WakafController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-  public function destroy(wakaf $wakaf)
-{
-    try {
-        $wakaf->delete(); // Hanya hapus tanpa mencari lagi
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Wakaf deleted successfully',
-            'errors' => null
-        ], 200);
-    } catch (\Throwable $th) {
-        return ResponseHelper::error($th->getMessage());
+    public function destroy(Wakaf $wakaf)
+    {
+        try {
+            $wakaf->delete();
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Wakaf deleted successfully',
+                'errors' => null
+            ], 200);
+        } catch (\Throwable $th) {
+            return ResponseHelper::error($th->getMessage());
+        }
     }
-}
 
+    public function totalPriceByCategory($categoryId)
+    {
+
+        try {
+            $response = ['total_amount' =>  Wakaf::where('category_wakaf', $categoryId)->sum('price')];
+
+            return ResponseHelper::success($response);
+        } catch (\Throwable $th) {
+            return ResponseHelper::error($th->getMessage());
+        }
+    }
 }
