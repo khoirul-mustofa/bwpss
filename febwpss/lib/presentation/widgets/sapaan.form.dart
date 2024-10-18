@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class SapaanForm extends StatefulWidget {
-  // Callback function untuk mengirimkan nilai ke luar
   final Function(String) onSapaanSelected;
 
   const SapaanForm({super.key, required this.onSapaanSelected});
@@ -36,9 +35,8 @@ class _SapaanFormState extends State<SapaanForm> {
               return GestureDetector(
                 onTap: () {
                   setState(() {
-                    selectedIndex = index; // Update pilihan yang dipilih
+                    selectedIndex = index;
                   });
-                  // Panggil callback dengan nilai sapaan yang dipilih
                   widget.onSapaanSelected(sapaanOptions[selectedIndex]);
                 },
                 child: Container(

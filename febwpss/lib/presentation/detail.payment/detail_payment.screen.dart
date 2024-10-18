@@ -1,12 +1,13 @@
+import 'package:febwpss/helper/my.logger.dart';
 import 'package:febwpss/helper/payment.icons.dart';
 import 'package:febwpss/presentation/widgets/payment/header.widget.dart';
 import 'package:febwpss/presentation/widgets/payment/title.widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'controllers/detail_payment.controller.dart';
 
@@ -27,16 +28,15 @@ class DetailPaymentScreen extends GetView<DetailPaymentController> {
                 : Column(
                     children: [
                       HeaderWidget(
-                        amount: int.tryParse(
-                                controller.response?['gross_amount']) ??
-                            0,
+                        amount: controller.wakaf.price ?? 0,
                         orderId: controller.response?['order_id'] ?? '',
                         expiryTime: controller.response?['expiry_time'],
                       ),
-                      QrisWidget(
-                        response: controller.response,
-                      ),
-                      // const CsStoreWidget()
+                      controller.wakaf.metodeBayar == 'qris'
+                          ? QrisWidget(
+                              response: controller.response,
+                            )
+                          : const CsStoreWidget(),
                     ],
                   ),
           );
@@ -54,7 +54,15 @@ class CsStoreWidget extends StatelessWidget {
     return const Column(
       children: [
         Row(
-          children: [],
+          children: [
+            Text(
+              'Cara Bayar',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         )
       ],
     );
@@ -68,23 +76,45 @@ class QrisWidget extends StatelessWidget {
   });
 
   dynamic response;
+  Future<void> _launchInBrowser(Uri url) async {
+    try {
+      if (!await launchUrl(
+        url,
+        mode: LaunchMode.externalApplication,
+      )) {
+        MyLogger.error('could not found $url');
+      }
+    } catch (e) {
+      MyLogger.fatal(e.toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(
+          height: 20,
+        ),
         TitleWidget(
           title: 'QRIS',
           image: PaymentIcons.qrisLogo,
         ),
         const SizedBox(height: 40),
-        SizedBox(
-          width: Get.width,
-          child: Center(
-            child: QrImageView(
-              data: response['actions'][0]['url'],
-              version: QrVersions.auto,
-              size: 200.0,
+        GestureDetector(
+          onTap: () {
+            final url = response['actions'][1]['url'];
+            print("Launching URL: $url");
+            _launchInBrowser(Uri.parse(url));
+          },
+          child: SizedBox(
+            width: Get.width,
+            child: Center(
+              child: QrImageView(
+                data: response['actions'][0]['url'],
+                version: QrVersions.auto,
+                size: 200.0,
+              ),
             ),
           ),
         ),

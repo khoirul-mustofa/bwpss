@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Wakaf;
 use Carbon\Carbon;
 use Midtrans\Config;
 use Midtrans\CoreApi;
@@ -63,6 +64,24 @@ class MidtransController extends Controller
 
                 break;
 
+            case 'bca':
+                $params = [
+                    'payment_type' => 'bank_transfer',
+                    'transaction_details' => [
+                        'order_id' => $orderId,
+                        'gross_amount' => $request->amount,
+                    ],
+                    'customer_details' => [
+                        'email' => $request->email,
+                        'phone' => $request->phone,
+                    ],
+
+                    'bank_transfer' => [
+                        'bank' => $request->bank,
+                    ],
+                ];
+                break;
+
             default:
 
                 if ($request->bank == 'qris') {
@@ -90,32 +109,25 @@ class MidtransController extends Controller
                         ],
                     ];
                 } else {
-                    $params = [
-                        'payment_type' => 'bank_transfer',
-                        'transaction_details' => [
-                            'order_id' => $orderId,
-                            'gross_amount' => $request->amount,
-                        ],
-                        'customer_details' => [
-                            'first_name' => $request->first_name,
-                            'last_name' => $request->last_name,
-                            'email' => $request->email,
-                            'phone' => $request->phone,
-                        ],
-
-                        'bank_transfer' => [
-                            'bank' => $request->bank,
-                        ],
-
-                    ];
                 }
                 break;
         }
 
-
-
-
         try {
+            Wakaf::create([
+                'order_id' => $orderId,
+                'metode_bayar' => $request->bank,
+                'fcm_token' => $request->fcm_token,
+                'status_payment' => 'pending',
+                'nama_lengkap' => $request->nama_lengkap,
+                'sapaan' => $request->sapaan,
+                'category_wakaf' => $request->category_wakaf,
+                'price' => $request->amount,
+                'no_wa' => $request->phone,
+                'email' => $request->email,
+                'pesan' => $request->pesan,
+
+            ])->save();
             // Proses pembayaran menggunakan Core API
             $payment = CoreApi::charge($params);
 
@@ -147,6 +159,9 @@ class MidtransController extends Controller
             if ($notification['transaction_status'] === 'settlement') {
                 // Pembayaran berhasil
                 // Update status pembayaran di database
+
+
+
             } elseif ($notification['transaction_status'] === 'expire') {
                 // Transaksi expired
             } elseif ($notification['transaction_status'] === 'cancel' || $notification['transaction_status'] === 'deny') {

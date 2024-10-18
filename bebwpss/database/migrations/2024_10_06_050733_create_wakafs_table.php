@@ -32,7 +32,8 @@ return new class extends Migration
                 'partial_refund', // Ketika pembayaran dikembalikan sebagian
                 'failure'         // Ketika pembayaran gagal
             ])->default('pending');
-            $table->string('fcm_token');
+            $table->string('order_id');
+            $table->string('fcm_token')->nullable();
             $table->timestamps();
         });
     }

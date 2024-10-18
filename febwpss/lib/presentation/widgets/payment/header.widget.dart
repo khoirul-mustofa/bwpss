@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class HeaderWidget extends StatefulWidget {
-  HeaderWidget(
+  const HeaderWidget(
       {super.key,
       required this.amount,
       required this.orderId,
@@ -15,7 +15,6 @@ class HeaderWidget extends StatefulWidget {
   final int amount;
   final String orderId;
   final String expiryTime;
-  bool onSelectPayment = false;
   @override
   State<HeaderWidget> createState() => _AmountHeaderState();
 }
@@ -65,7 +64,9 @@ class _AmountHeaderState extends State<HeaderWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16,
+          ),
           child: Text(
             formatCurrency(widget.amount),
             style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -94,27 +95,21 @@ class _AmountHeaderState extends State<HeaderWidget> {
                   Icons.copy,
                   size: 14,
                 )),
-            const Spacer(),
-            TextButton(onPressed: () {}, child: const Text('Details')),
           ],
         ),
-        widget.onSelectPayment == false
-            ? Container(
-                width: Get.width,
-                height: 24,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                ),
-                child: Center(
-                    child: Text(
-                  formatDuration(_remainingTime),
-                  style: const TextStyle(
-                      fontSize: 12,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
-                )),
-              )
-            : const Divider(),
+        Container(
+          width: Get.width,
+          height: 24,
+          decoration: BoxDecoration(
+            color: Colors.grey[300],
+          ),
+          child: Center(
+              child: Text(
+            formatDuration(_remainingTime),
+            style: const TextStyle(
+                fontSize: 12, color: Colors.black, fontWeight: FontWeight.bold),
+          )),
+        )
       ],
     );
   }

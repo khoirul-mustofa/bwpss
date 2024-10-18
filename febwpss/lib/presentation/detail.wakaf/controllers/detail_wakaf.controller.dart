@@ -14,14 +14,23 @@ class DetailWakafController extends GetxController {
 
   int nominalPrice = 0;
   String metodePembayaran = '';
-  String sapaan = '';
+  String sapaan = 'Bapak';
 
   CategoryWakaf? category = Get.arguments;
   final List<String> prices = ['10', '20', '50', '100', 'Nominal'];
   int? selectedIndexPrice;
 
-  List<String> banks = ['bca', 'bni', 'bri'];
-  String? selectedBank;
+  _resetForm() {
+    nameController.clear();
+    email.clear();
+    noWa.clear();
+    pesan.clear();
+    selectedIndexPrice = null;
+    nominalPrice = 0;
+    metodePembayaran = '';
+    update();
+  }
+
   onChangeIndexPrice(int index) {
     selectedIndexPrice = index;
     switch (index) {
@@ -101,8 +110,18 @@ class DetailWakafController extends GetxController {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    nameController.dispose();
+    noWa.dispose();
+    email.dispose();
+    pesan.dispose();
+  }
+
+  @override
   void onInit() {
     super.onInit();
     isButtonDisabled = false;
+    _resetForm();
   }
 }

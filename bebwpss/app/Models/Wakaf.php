@@ -19,6 +19,8 @@ class Wakaf extends Model
         'email',
         'pesan',
         'metode_bayar',
+        'order_id',
+        'status_payment',
         'fcm_token',
     ];
 

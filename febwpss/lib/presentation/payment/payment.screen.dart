@@ -24,12 +24,6 @@ class PaymentScreen extends GetView<PaymentController> {
               body: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  HeaderWidget(
-                    amount: 20000,
-                    orderId: '1234567890',
-                    expiryTime: '2024-10-20 18:41:11',
-                    onselectPayment: true,
-                  ),
                   const SizedBox(
                     height: 20,
                   ),

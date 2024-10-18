@@ -13,12 +13,17 @@ class DetailPaymentController extends GetxController {
 
   createPayment() async {
     try {
+      print(wakaf);
       response = await paymentService.createPayment({
         "amount": wakaf.price,
-        "first_name": wakaf.namaLengkap,
+        "nama_lengkap": wakaf.namaLengkap,
         "email": wakaf.email,
         "phone": wakaf.noWa,
-        "bank": wakaf.metodeBayar
+        "bank": wakaf.metodeBayar,
+        "fcm_token": '',
+        "sapaan": wakaf.sapaan,
+        "category_wakaf": wakaf.categoryWakaf,
+        "pesan": wakaf.pesan,
       }).then((response) {
         return response.data;
       });
@@ -26,7 +31,7 @@ class DetailPaymentController extends GetxController {
         isLoading = false;
         update();
       });
-
+      update();
       print('Payment created successfully => $response');
     } catch (e) {
       print("Error: $e");

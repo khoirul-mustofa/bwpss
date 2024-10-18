@@ -57,4 +57,9 @@ class Wakaf {
     data['updated_at'] = updatedAt;
     return data;
   }
+
+  @override
+  String toString() {
+    return 'Wakaf{id: $id, namaLengkap: $namaLengkap, sapaan: $sapaan, categoryWakaf: $categoryWakaf, price: $price, noWa: $noWa, email: $email, pesan: $pesan, metodeBayar: $metodeBayar, fcmToken: $fcmToken, createdAt: $createdAt, updatedAt: $updatedAt}';
+  }
 }

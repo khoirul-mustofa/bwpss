@@ -67,13 +67,6 @@ class DetailWakafScreen extends GetView<DetailWakafController> {
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     color: Colors.white,
-                    boxShadow: [
-                      // BoxShadow(
-                      //   color: Colors.black12,
-                      //   blurRadius: 10,
-                      //   offset: Offset(0, 5),
-                      // )
-                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,7 +185,6 @@ class DetailWakafScreen extends GetView<DetailWakafController> {
                   onSapaanSelected: (value) {
                     controller.sapaan = value;
                     controller.update();
-                    print(controller.sapaan);
                   },
                 ),
                 const SizedBox(
@@ -200,6 +192,9 @@ class DetailWakafScreen extends GetView<DetailWakafController> {
                 ),
                 FormInputWakaf(
                   onChanged: controller.onChangeInputForm,
+                ),
+                const SizedBox(
+                  height: 60,
                 ),
               ],
             ),
@@ -210,7 +205,7 @@ class DetailWakafScreen extends GetView<DetailWakafController> {
               margin: const EdgeInsets.only(left: 16, right: 16, bottom: 18),
               child: ElevatedButton(
                 onPressed: controller.isButtonDisabled
-                    ? null // Jika tombol dinonaktifkan, onPressed menjadi null
+                    ? null
                     : () async {
                         controller.onSubmitForm();
                       },
