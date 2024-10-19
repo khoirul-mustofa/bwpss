@@ -17,7 +17,7 @@ class HomeScreen extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return GetBuilder(
         init: HomeController(),
-        builder: (controllert) {
+        builder: (controller) {
           if (controller.categories.isEmpty) {
             return const Scaffold(
                 body: Center(child: CupertinoActivityIndicator()));
@@ -115,30 +115,38 @@ class HomeScreen extends GetView<HomeController> {
                         const SizedBox(
                           height: 20,
                         ),
-                        const SizedBox(
-                            height: 230, child: YouTubePlayerScreen()),
-                        const SizedBox(height: 20),
+                        // const SizedBox(
+                        //     height: 230, child: YouTubePlayerScreen()),
+                        // const SizedBox(height: 20),
                         Wrap(
                           alignment: WrapAlignment.center,
                           runAlignment: WrapAlignment.center,
                           spacing: 30,
-                          children: List.generate(4, (index) {
-                            return Container(
+                          children:
+                              List.generate(controller.menuApp.length, (index) {
+                            return SizedBox(
                                 width: 60,
-                                height: 70,
-                                color: Colors.amber,
+                                height: 90,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    Container(
-                                        width: 40,
-                                        height: 40,
-                                        color: Colors.green,
-                                        child: const Icon(Icons.abc)),
+                                    CircleAvatar(
+                                      backgroundColor:
+                                          controller.getRandomColor(),
+                                      radius: 25,
+                                      child: Text(
+                                        controller.menuApp[index][0],
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
                                     const SizedBox(
                                       height: 10,
                                     ),
-                                    const Text('Wakaf'),
+                                    Text(
+                                      controller.menuApp[index],
+                                      style: const TextStyle(fontSize: 12),
+                                    ),
                                   ],
                                 ));
                           }),

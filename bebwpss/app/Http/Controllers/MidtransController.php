@@ -20,7 +20,7 @@ class MidtransController extends Controller
     public function charge(Request $request)
     {
         $params = [];
-        $orderId = 'WAKAF-' . Carbon::now()->format('YmdHis') . '-' . uniqid();
+        $orderId = 'W-' . Carbon::now()->format('Ymd') . '-' . uniqid();
 
         switch ($request->bank) {
             case 'mandiri':

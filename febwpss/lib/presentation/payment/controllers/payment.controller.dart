@@ -7,11 +7,11 @@ import 'package:get/get.dart';
 class PaymentController extends GetxController {
   final List<String> listVirtualAccountIcons = [
     PaymentIcons.bcaLogo,
-    PaymentIcons.mandiriLogo,
+    PaymentIcons.echannelLogo,
     PaymentIcons.bniLogo,
     PaymentIcons.briLogo,
     PaymentIcons.permataLogo,
-    PaymentIcons.cmbNiagaLogo,
+    PaymentIcons.cimbLogo,
   ];
   final List<String> nameVirtualAccount = [
     'bca',

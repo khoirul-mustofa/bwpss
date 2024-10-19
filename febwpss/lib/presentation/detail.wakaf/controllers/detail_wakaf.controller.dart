@@ -16,7 +16,8 @@ class DetailWakafController extends GetxController {
   String metodePembayaran = '';
   String sapaan = 'Bapak';
 
-  CategoryWakaf? category = Get.arguments;
+  // CategoryWakaf? category = Get.arguments;
+  CategoryWakaf? category;
   final List<String> prices = ['10', '20', '50', '100', 'Nominal'];
   int? selectedIndexPrice;
 

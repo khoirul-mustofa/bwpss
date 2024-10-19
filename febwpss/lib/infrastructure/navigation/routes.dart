@@ -1,6 +1,6 @@
 class Routes {
   static Future<String> get initialRoute async {
-    return HOME;
+    return DETAIL_PAYMENT;
   }
 
   static const DETAIL_WAKAF = '/detail-wakaf';

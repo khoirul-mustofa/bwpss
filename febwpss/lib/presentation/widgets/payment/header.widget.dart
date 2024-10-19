@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:febwpss/helper/format.currency.dart';
+import 'package:febwpss/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -40,7 +41,7 @@ class _AmountHeaderState extends State<HeaderWidget> {
       } else {
         timer.cancel(); // Menghentikan timer jika waktunya habis
         // Aksi setelah waktu habis
-        Get.back();
+        Get.toNamed(Routes.HOME);
       }
     });
   }

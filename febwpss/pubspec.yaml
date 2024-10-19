@@ -36,5 +36,5 @@ flutter:
   uses-material-design: true
   assets:
     - .env
-
     - assets/bank/
+    - assets/json/

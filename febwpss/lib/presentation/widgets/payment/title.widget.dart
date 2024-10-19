@@ -6,23 +6,23 @@ class TitleWidget extends StatelessWidget {
   TitleWidget({super.key, required this.title, required this.image});
 
   String title;
-
-  /// svg image path
   String image;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return SizedBox(
       width: Get.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             title,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
           ),
-          SvgPicture.asset(image)
+          SvgPicture.asset(
+            image,
+            width: 50,
+          )
         ],
       ),
     );

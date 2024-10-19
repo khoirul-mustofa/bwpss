@@ -1,10 +1,10 @@
 class PaymentIcons {
   static String briLogo = 'assets/bank/bri.svg';
   static String bcaLogo = 'assets/bank/bca.svg';
-  static String mandiriLogo = 'assets/bank/mandiri.svg';
+  static String echannelLogo = 'assets/bank/mandiri.svg';
   static String bniLogo = 'assets/bank/bni.svg';
   static String permataLogo = 'assets/bank/permata.svg';
-  static String cmbNiagaLogo = 'assets/bank/cmbNiaga.svg';
+  static String cimbLogo = 'assets/bank/cmbNiaga.svg';
 
   static String shopeeLogo = 'assets/bank/shopee.svg';
   static String ovoLogo = 'assets/bank/ovo.svg';

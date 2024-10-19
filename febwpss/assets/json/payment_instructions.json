@@ -1,0 +1,26 @@
+{
+    "bca": {
+        "atm bca": [
+            "Select other transactions on the main menu.",
+            "Select transfer.",
+            "Select to BCA virtual account.",
+            "Insert BCA Virtual account number.",
+            "Insert the payable amount, then confirm.",
+            "Payment completed."
+        ],
+        "klik bca": [
+            "Select fund transfer.",
+            "Select transfer to BCA virtual account.",
+            "Insert BCA virtual account number.",
+            "Insert the payable amount, then confirm.",
+            "Payment completed."
+        ],
+        "mbca": [
+            "Select m-Transfer.",
+            "Select BCA virtual account.",
+            "Insert BCA virtual account number.",
+            "Insert the payable amount, then confirm.",
+            "Payment completed."
+        ]
+    }
+}
